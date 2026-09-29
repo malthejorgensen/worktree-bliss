@@ -1,0 +1,3 @@
+# Use `env -u` to unset variables automatically set by `honcho`.
+backend: env -u DATABASE_URL -u REDIS_URL uv --directory backend run --env-file=.env --env-file=.env.worktree app.py
+frontend: npm -C frontend run dev
